@@ -1,4 +1,6 @@
-<html lang="en"><head>
+<!doctype html>
+<html lang="en">
+<head>
     <title>Code coverage report for node-npmtest-istanbul/istanbul/lib/object-utils.js</title>
     <meta charset="utf-8">
     <style>
@@ -208,11 +210,11 @@
         
         Ignored: <span class="metric">1 statement, 1 branch</span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../../index.html">All files</a> » <a href="index.html">node-npmtest-istanbul/istanbul/lib/</a> » object-utils.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-istanbul/istanbul/lib/</a> &#187; object-utils.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tbody><tr><td class="line-count">1
+<tr><td class="line-count">1
 2
 3
 4
@@ -1114,20 +1116,20 @@
      * @static
      * @param {Object} fileCoverage the coverage object for a single file
      */
-<span class="fstat-no" title="function not covered">    function addDerivedInfoForFile(fileCoverage) {</span>
-<span class="cstat-no" title="statement not covered">        var statementMap = fileCoverage.statementMap,</span>
+<span class="fstat-no" title="function not covered" >    function addDerivedInfoForFile(fileCoverage) {</span>
+<span class="cstat-no" title="statement not covered" >        var statementMap = fileCoverage.statementMap,</span>
             statements = fileCoverage.s,
             lineMap;
 &nbsp;
-<span class="cstat-no" title="statement not covered">        if (!fileCoverage.l) {</span>
-<span class="cstat-no" title="statement not covered">            fileCoverage.l = lineMap = {};</span>
-<span class="cstat-no" title="statement not covered">            Object.keys(statements).forEach(<span class="fstat-no" title="function not covered">function (st) {</span></span>
-<span class="cstat-no" title="statement not covered">                var line = statementMap[st].start.line,</span>
+<span class="cstat-no" title="statement not covered" >        if (!fileCoverage.l) {</span>
+<span class="cstat-no" title="statement not covered" >            fileCoverage.l = lineMap = {};</span>
+<span class="cstat-no" title="statement not covered" >            Object.keys(statements).forEach(<span class="fstat-no" title="function not covered" >function (st) {</span></span>
+<span class="cstat-no" title="statement not covered" >                var line = statementMap[st].start.line,</span>
                     count = statements[st],
                     prevVal = lineMap[line];
-<span class="cstat-no" title="statement not covered">                if (count === 0 &amp;&amp; statementMap[st].skip) { <span class="cstat-no" title="statement not covered">count = 1; </span>}</span>
-<span class="cstat-no" title="statement not covered">                if (typeof prevVal === 'undefined' || prevVal &lt; count) {</span>
-<span class="cstat-no" title="statement not covered">                    lineMap[line] = count;</span>
+<span class="cstat-no" title="statement not covered" >                if (count === 0 &amp;&amp; statementMap[st].skip) { <span class="cstat-no" title="statement not covered" >count = 1; </span>}</span>
+<span class="cstat-no" title="statement not covered" >                if (typeof prevVal === 'undefined' || prevVal &lt; count) {</span>
+<span class="cstat-no" title="statement not covered" >                    lineMap[line] = count;</span>
                 }
             });
         }
@@ -1139,9 +1141,9 @@
      * @static
      * @param {Object} coverage the coverage object
      */
-<span class="fstat-no" title="function not covered">    function addDerivedInfo(coverage) {</span>
-<span class="cstat-no" title="statement not covered">        Object.keys(coverage).forEach(<span class="fstat-no" title="function not covered">function (k) {</span></span>
-<span class="cstat-no" title="statement not covered">            addDerivedInfoForFile(coverage[k]);</span>
+<span class="fstat-no" title="function not covered" >    function addDerivedInfo(coverage) {</span>
+<span class="cstat-no" title="statement not covered" >        Object.keys(coverage).forEach(<span class="fstat-no" title="function not covered" >function (k) {</span></span>
+<span class="cstat-no" title="statement not covered" >            addDerivedInfoForFile(coverage[k]);</span>
         });
     }
     /**
@@ -1150,67 +1152,67 @@
      * @static
      * @param {Object} coverage the coverage object
      */
-<span class="fstat-no" title="function not covered">    function removeDerivedInfo(coverage) {</span>
-<span class="cstat-no" title="statement not covered">        Object.keys(coverage).forEach(<span class="fstat-no" title="function not covered">function (k) {</span></span>
-<span class="cstat-no" title="statement not covered">            delete coverage[k].l;</span>
+<span class="fstat-no" title="function not covered" >    function removeDerivedInfo(coverage) {</span>
+<span class="cstat-no" title="statement not covered" >        Object.keys(coverage).forEach(<span class="fstat-no" title="function not covered" >function (k) {</span></span>
+<span class="cstat-no" title="statement not covered" >            delete coverage[k].l;</span>
         });
     }
 &nbsp;
-<span class="fstat-no" title="function not covered">    function percent(covered, total) {</span>
-<span class="cstat-no" title="statement not covered">        var tmp;</span>
-<span class="cstat-no" title="statement not covered">        if (total &gt; 0) {</span>
-<span class="cstat-no" title="statement not covered">            tmp = 1000 * 100 * covered / total + 5;</span>
-<span class="cstat-no" title="statement not covered">            return Math.floor(tmp / 10) / 100;</span>
+<span class="fstat-no" title="function not covered" >    function percent(covered, total) {</span>
+<span class="cstat-no" title="statement not covered" >        var tmp;</span>
+<span class="cstat-no" title="statement not covered" >        if (total &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >            tmp = 1000 * 100 * covered / total + 5;</span>
+<span class="cstat-no" title="statement not covered" >            return Math.floor(tmp / 10) / 100;</span>
         } else {
-<span class="cstat-no" title="statement not covered">            return 100.00;</span>
+<span class="cstat-no" title="statement not covered" >            return 100.00;</span>
         }
     }
 &nbsp;
-<span class="fstat-no" title="function not covered">    function computeSimpleTotals(fileCoverage, property, mapProperty) {</span>
-<span class="cstat-no" title="statement not covered">        var stats = fileCoverage[property],</span>
+<span class="fstat-no" title="function not covered" >    function computeSimpleTotals(fileCoverage, property, mapProperty) {</span>
+<span class="cstat-no" title="statement not covered" >        var stats = fileCoverage[property],</span>
             map = mapProperty ? fileCoverage[mapProperty] : null,
             ret = { total: 0, covered: 0, skipped: 0 };
 &nbsp;
-<span class="cstat-no" title="statement not covered">        Object.keys(stats).forEach(<span class="fstat-no" title="function not covered">function (key) {</span></span>
-<span class="cstat-no" title="statement not covered">            var covered = !!stats[key],</span>
+<span class="cstat-no" title="statement not covered" >        Object.keys(stats).forEach(<span class="fstat-no" title="function not covered" >function (key) {</span></span>
+<span class="cstat-no" title="statement not covered" >            var covered = !!stats[key],</span>
                 skipped = map &amp;&amp; map[key].skip;
-<span class="cstat-no" title="statement not covered">            ret.total += 1;</span>
-<span class="cstat-no" title="statement not covered">            if (covered || skipped) {</span>
-<span class="cstat-no" title="statement not covered">                ret.covered += 1;</span>
+<span class="cstat-no" title="statement not covered" >            ret.total += 1;</span>
+<span class="cstat-no" title="statement not covered" >            if (covered || skipped) {</span>
+<span class="cstat-no" title="statement not covered" >                ret.covered += 1;</span>
             }
-<span class="cstat-no" title="statement not covered">            if (!covered &amp;&amp; skipped) {</span>
-<span class="cstat-no" title="statement not covered">                ret.skipped += 1;</span>
+<span class="cstat-no" title="statement not covered" >            if (!covered &amp;&amp; skipped) {</span>
+<span class="cstat-no" title="statement not covered" >                ret.skipped += 1;</span>
             }
         });
-<span class="cstat-no" title="statement not covered">        ret.pct = percent(ret.covered, ret.total);</span>
-<span class="cstat-no" title="statement not covered">        return ret;</span>
+<span class="cstat-no" title="statement not covered" >        ret.pct = percent(ret.covered, ret.total);</span>
+<span class="cstat-no" title="statement not covered" >        return ret;</span>
     }
 &nbsp;
-<span class="fstat-no" title="function not covered">    function computeBranchTotals(fileCoverage) {</span>
-<span class="cstat-no" title="statement not covered">        var stats = fileCoverage.b,</span>
+<span class="fstat-no" title="function not covered" >    function computeBranchTotals(fileCoverage) {</span>
+<span class="cstat-no" title="statement not covered" >        var stats = fileCoverage.b,</span>
             branchMap = fileCoverage.branchMap,
             ret = { total: 0, covered: 0, skipped: 0 };
 &nbsp;
-<span class="cstat-no" title="statement not covered">        Object.keys(stats).forEach(<span class="fstat-no" title="function not covered">function (key) {</span></span>
-<span class="cstat-no" title="statement not covered">            var branches = stats[key],</span>
+<span class="cstat-no" title="statement not covered" >        Object.keys(stats).forEach(<span class="fstat-no" title="function not covered" >function (key) {</span></span>
+<span class="cstat-no" title="statement not covered" >            var branches = stats[key],</span>
                 map = branchMap[key],
                 covered,
                 skipped,
                 i;
-<span class="cstat-no" title="statement not covered">            for (i = 0; i &lt; branches.length; i += 1) {</span>
-<span class="cstat-no" title="statement not covered">                covered = branches[i] &gt; 0;</span>
-<span class="cstat-no" title="statement not covered">                skipped = map.locations &amp;&amp; map.locations[i] &amp;&amp; map.locations[i].skip;</span>
-<span class="cstat-no" title="statement not covered">                if (covered || skipped) {</span>
-<span class="cstat-no" title="statement not covered">                    ret.covered += 1;</span>
+<span class="cstat-no" title="statement not covered" >            for (i = 0; i &lt; branches.length; i += 1) {</span>
+<span class="cstat-no" title="statement not covered" >                covered = branches[i] &gt; 0;</span>
+<span class="cstat-no" title="statement not covered" >                skipped = map.locations &amp;&amp; map.locations[i] &amp;&amp; map.locations[i].skip;</span>
+<span class="cstat-no" title="statement not covered" >                if (covered || skipped) {</span>
+<span class="cstat-no" title="statement not covered" >                    ret.covered += 1;</span>
                 }
-<span class="cstat-no" title="statement not covered">                if (!covered &amp;&amp; skipped) {</span>
-<span class="cstat-no" title="statement not covered">                    ret.skipped += 1;</span>
+<span class="cstat-no" title="statement not covered" >                if (!covered &amp;&amp; skipped) {</span>
+<span class="cstat-no" title="statement not covered" >                    ret.skipped += 1;</span>
                 }
             }
-<span class="cstat-no" title="statement not covered">            ret.total += branches.length;</span>
+<span class="cstat-no" title="statement not covered" >            ret.total += branches.length;</span>
         });
-<span class="cstat-no" title="statement not covered">        ret.pct = percent(ret.covered, ret.total);</span>
-<span class="cstat-no" title="statement not covered">        return ret;</span>
+<span class="cstat-no" title="statement not covered" >        ret.pct = percent(ret.covered, ret.total);</span>
+<span class="cstat-no" title="statement not covered" >        return ret;</span>
     }
     /**
      * returns a blank summary metrics object. A metrics object has the following
@@ -1236,8 +1238,8 @@
      * @static
      * @return {Object} a blank metrics object
      */
-<span class="fstat-no" title="function not covered">    function blankSummary() {</span>
-<span class="cstat-no" title="statement not covered">        return {</span>
+<span class="fstat-no" title="function not covered" >    function blankSummary() {</span>
+<span class="cstat-no" title="statement not covered" >        return {</span>
             lines: {
                 total: 0,
                 covered: 0,
@@ -1274,15 +1276,15 @@
      * @param {Object} fileCoverage the coverage object for a single file.
      * @return {Object} the summary metrics for the file
      */
-<span class="fstat-no" title="function not covered">    function summarizeFileCoverage(fileCoverage) {</span>
-<span class="cstat-no" title="statement not covered">        var ret = blankSummary();</span>
-<span class="cstat-no" title="statement not covered">        addDerivedInfoForFile(fileCoverage);</span>
-<span class="cstat-no" title="statement not covered">        ret.lines = computeSimpleTotals(fileCoverage, 'l');</span>
-<span class="cstat-no" title="statement not covered">        ret.functions = computeSimpleTotals(fileCoverage, 'f', 'fnMap');</span>
-<span class="cstat-no" title="statement not covered">        ret.statements = computeSimpleTotals(fileCoverage, 's', 'statementMap');</span>
-<span class="cstat-no" title="statement not covered">        ret.branches = computeBranchTotals(fileCoverage);</span>
-<span class="cstat-no" title="statement not covered">        ret.linesCovered = fileCoverage.l;</span>
-<span class="cstat-no" title="statement not covered">        return ret;</span>
+<span class="fstat-no" title="function not covered" >    function summarizeFileCoverage(fileCoverage) {</span>
+<span class="cstat-no" title="statement not covered" >        var ret = blankSummary();</span>
+<span class="cstat-no" title="statement not covered" >        addDerivedInfoForFile(fileCoverage);</span>
+<span class="cstat-no" title="statement not covered" >        ret.lines = computeSimpleTotals(fileCoverage, 'l');</span>
+<span class="cstat-no" title="statement not covered" >        ret.functions = computeSimpleTotals(fileCoverage, 'f', 'fnMap');</span>
+<span class="cstat-no" title="statement not covered" >        ret.statements = computeSimpleTotals(fileCoverage, 's', 'statementMap');</span>
+<span class="cstat-no" title="statement not covered" >        ret.branches = computeBranchTotals(fileCoverage);</span>
+<span class="cstat-no" title="statement not covered" >        ret.linesCovered = fileCoverage.l;</span>
+<span class="cstat-no" title="statement not covered" >        return ret;</span>
     }
     /**
      * merges two instances of file coverage objects *for the same file*
@@ -1295,27 +1297,27 @@
      * @return {Object} an object that is a result of merging the two. Note that
      *      the input objects are not changed in any way.
      */
-<span class="fstat-no" title="function not covered">    function mergeFileCoverage(first, second) {</span>
-<span class="cstat-no" title="statement not covered">        var ret = JSON.parse(JSON.stringify(first)),</span>
+<span class="fstat-no" title="function not covered" >    function mergeFileCoverage(first, second) {</span>
+<span class="cstat-no" title="statement not covered" >        var ret = JSON.parse(JSON.stringify(first)),</span>
             i;
 &nbsp;
-<span class="cstat-no" title="statement not covered">        delete ret.l; </span>//remove derived info
+<span class="cstat-no" title="statement not covered" >        delete ret.l; </span>//remove derived info
 &nbsp;
-<span class="cstat-no" title="statement not covered">        Object.keys(second.s).forEach(<span class="fstat-no" title="function not covered">function (k) {</span></span>
-<span class="cstat-no" title="statement not covered">            ret.s[k] += second.s[k];</span>
+<span class="cstat-no" title="statement not covered" >        Object.keys(second.s).forEach(<span class="fstat-no" title="function not covered" >function (k) {</span></span>
+<span class="cstat-no" title="statement not covered" >            ret.s[k] += second.s[k];</span>
         });
-<span class="cstat-no" title="statement not covered">        Object.keys(second.f).forEach(<span class="fstat-no" title="function not covered">function (k) {</span></span>
-<span class="cstat-no" title="statement not covered">            ret.f[k] += second.f[k];</span>
+<span class="cstat-no" title="statement not covered" >        Object.keys(second.f).forEach(<span class="fstat-no" title="function not covered" >function (k) {</span></span>
+<span class="cstat-no" title="statement not covered" >            ret.f[k] += second.f[k];</span>
         });
-<span class="cstat-no" title="statement not covered">        Object.keys(second.b).forEach(<span class="fstat-no" title="function not covered">function (k) {</span></span>
-<span class="cstat-no" title="statement not covered">            var retArray = ret.b[k],</span>
+<span class="cstat-no" title="statement not covered" >        Object.keys(second.b).forEach(<span class="fstat-no" title="function not covered" >function (k) {</span></span>
+<span class="cstat-no" title="statement not covered" >            var retArray = ret.b[k],</span>
                 secondArray = second.b[k];
-<span class="cstat-no" title="statement not covered">            for (i = 0; i &lt; retArray.length; i += 1) {</span>
-<span class="cstat-no" title="statement not covered">                retArray[i] += secondArray[i];</span>
+<span class="cstat-no" title="statement not covered" >            for (i = 0; i &lt; retArray.length; i += 1) {</span>
+<span class="cstat-no" title="statement not covered" >                retArray[i] += secondArray[i];</span>
             }
         });
 &nbsp;
-<span class="cstat-no" title="statement not covered">        return ret;</span>
+<span class="cstat-no" title="statement not covered" >        return ret;</span>
     }
     /**
      * merges multiple summary metrics objects by summing up the `totals` and
@@ -1327,36 +1329,36 @@
      * @param {Object} summary... multiple summary metrics objects
      * @return {Object} the merged summary metrics
      */
-<span class="fstat-no" title="function not covered">    function mergeSummaryObjects() {</span>
-<span class="cstat-no" title="statement not covered">        var ret = blankSummary(),</span>
+<span class="fstat-no" title="function not covered" >    function mergeSummaryObjects() {</span>
+<span class="cstat-no" title="statement not covered" >        var ret = blankSummary(),</span>
             args = Array.prototype.slice.call(arguments),
             keys = ['lines', 'statements', 'branches', 'functions'],
-            increment = <span class="fstat-no" title="function not covered">function (obj) {</span>
-<span class="cstat-no" title="statement not covered">                if (obj) {</span>
-<span class="cstat-no" title="statement not covered">                    keys.forEach(<span class="fstat-no" title="function not covered">function (key) {</span></span>
-<span class="cstat-no" title="statement not covered">                        ret[key].total += obj[key].total;</span>
-<span class="cstat-no" title="statement not covered">                        ret[key].covered += obj[key].covered;</span>
-<span class="cstat-no" title="statement not covered">                        ret[key].skipped += obj[key].skipped;</span>
+            increment = <span class="fstat-no" title="function not covered" >function (obj) {</span>
+<span class="cstat-no" title="statement not covered" >                if (obj) {</span>
+<span class="cstat-no" title="statement not covered" >                    keys.forEach(<span class="fstat-no" title="function not covered" >function (key) {</span></span>
+<span class="cstat-no" title="statement not covered" >                        ret[key].total += obj[key].total;</span>
+<span class="cstat-no" title="statement not covered" >                        ret[key].covered += obj[key].covered;</span>
+<span class="cstat-no" title="statement not covered" >                        ret[key].skipped += obj[key].skipped;</span>
                     });
 &nbsp;
                     // keep track of all lines we have coverage for.
-<span class="cstat-no" title="statement not covered">                    Object.keys(obj.linesCovered).forEach(<span class="fstat-no" title="function not covered">function (key) {</span></span>
-<span class="cstat-no" title="statement not covered">                        if (!ret.linesCovered[key]) {</span>
-<span class="cstat-no" title="statement not covered">                            ret.linesCovered[key] = obj.linesCovered[key];</span>
+<span class="cstat-no" title="statement not covered" >                    Object.keys(obj.linesCovered).forEach(<span class="fstat-no" title="function not covered" >function (key) {</span></span>
+<span class="cstat-no" title="statement not covered" >                        if (!ret.linesCovered[key]) {</span>
+<span class="cstat-no" title="statement not covered" >                            ret.linesCovered[key] = obj.linesCovered[key];</span>
                         } else {
-<span class="cstat-no" title="statement not covered">                            ret.linesCovered[key] += obj.linesCovered[key];</span>
+<span class="cstat-no" title="statement not covered" >                            ret.linesCovered[key] += obj.linesCovered[key];</span>
                         }
                     });
                 }
             };
-<span class="cstat-no" title="statement not covered">        args.forEach(<span class="fstat-no" title="function not covered">function (arg) {</span></span>
-<span class="cstat-no" title="statement not covered">            increment(arg);</span>
+<span class="cstat-no" title="statement not covered" >        args.forEach(<span class="fstat-no" title="function not covered" >function (arg) {</span></span>
+<span class="cstat-no" title="statement not covered" >            increment(arg);</span>
         });
-<span class="cstat-no" title="statement not covered">        keys.forEach(<span class="fstat-no" title="function not covered">function (key) {</span></span>
-<span class="cstat-no" title="statement not covered">            ret[key].pct = percent(ret[key].covered, ret[key].total);</span>
+<span class="cstat-no" title="statement not covered" >        keys.forEach(<span class="fstat-no" title="function not covered" >function (key) {</span></span>
+<span class="cstat-no" title="statement not covered" >            ret[key].pct = percent(ret[key].covered, ret[key].total);</span>
         });
 &nbsp;
-<span class="cstat-no" title="statement not covered">        return ret;</span>
+<span class="cstat-no" title="statement not covered" >        return ret;</span>
     }
     /**
      * returns the coverage summary for a single coverage object. This is
@@ -1367,12 +1369,12 @@
      * @param {Object} coverage  the coverage object
      * @return {Object} summary coverage metrics across all files in the coverage object
      */
-<span class="fstat-no" title="function not covered">    function summarizeCoverage(coverage) {</span>
-<span class="cstat-no" title="statement not covered">        var fileSummary = [];</span>
-<span class="cstat-no" title="statement not covered">        Object.keys(coverage).forEach(<span class="fstat-no" title="function not covered">function (key) {</span></span>
-<span class="cstat-no" title="statement not covered">            fileSummary.push(summarizeFileCoverage(coverage[key]));</span>
+<span class="fstat-no" title="function not covered" >    function summarizeCoverage(coverage) {</span>
+<span class="cstat-no" title="statement not covered" >        var fileSummary = [];</span>
+<span class="cstat-no" title="statement not covered" >        Object.keys(coverage).forEach(<span class="fstat-no" title="function not covered" >function (key) {</span></span>
+<span class="cstat-no" title="statement not covered" >            fileSummary.push(summarizeFileCoverage(coverage[key]));</span>
         });
-<span class="cstat-no" title="statement not covered">        return mergeSummaryObjects.apply(null, fileSummary);</span>
+<span class="cstat-no" title="statement not covered" >        return mergeSummaryObjects.apply(null, fileSummary);</span>
     }
 &nbsp;
     /**
@@ -1385,19 +1387,19 @@
      * @param {Object} coverage The `istanbul` coverage object
      * @return {Object} a coverage object in `yuitest_coverage` format.
      */
-<span class="fstat-no" title="function not covered">    function toYUICoverage(coverage) {</span>
-<span class="cstat-no" title="statement not covered">        var ret = {};</span>
+<span class="fstat-no" title="function not covered" >    function toYUICoverage(coverage) {</span>
+<span class="cstat-no" title="statement not covered" >        var ret = {};</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">        addDerivedInfo(coverage);</span>
+<span class="cstat-no" title="statement not covered" >        addDerivedInfo(coverage);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">        Object.keys(coverage).forEach(<span class="fstat-no" title="function not covered">function (k) {</span></span>
-<span class="cstat-no" title="statement not covered">            var fileCoverage = coverage[k],</span>
+<span class="cstat-no" title="statement not covered" >        Object.keys(coverage).forEach(<span class="fstat-no" title="function not covered" >function (k) {</span></span>
+<span class="cstat-no" title="statement not covered" >            var fileCoverage = coverage[k],</span>
                 lines = fileCoverage.l,
                 functions = fileCoverage.f,
                 fnMap = fileCoverage.fnMap,
                 o;
 &nbsp;
-<span class="cstat-no" title="statement not covered">            o = ret[k] = {</span>
+<span class="cstat-no" title="statement not covered" >            o = ret[k] = {</span>
                 lines: {},
                 calledLines: 0,
                 coveredLines: 0,
@@ -1405,23 +1407,23 @@
                 calledFunctions: 0,
                 coveredFunctions: 0
             };
-<span class="cstat-no" title="statement not covered">            Object.keys(lines).forEach(<span class="fstat-no" title="function not covered">function (k) {</span></span>
-<span class="cstat-no" title="statement not covered">                o.lines[k] = lines[k];</span>
-<span class="cstat-no" title="statement not covered">                o.coveredLines += 1;</span>
-<span class="cstat-no" title="statement not covered">                if (lines[k] &gt; 0) {</span>
-<span class="cstat-no" title="statement not covered">                    o.calledLines += 1;</span>
+<span class="cstat-no" title="statement not covered" >            Object.keys(lines).forEach(<span class="fstat-no" title="function not covered" >function (k) {</span></span>
+<span class="cstat-no" title="statement not covered" >                o.lines[k] = lines[k];</span>
+<span class="cstat-no" title="statement not covered" >                o.coveredLines += 1;</span>
+<span class="cstat-no" title="statement not covered" >                if (lines[k] &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >                    o.calledLines += 1;</span>
                 }
             });
-<span class="cstat-no" title="statement not covered">            Object.keys(functions).forEach(<span class="fstat-no" title="function not covered">function (k) {</span></span>
-<span class="cstat-no" title="statement not covered">                var name = fnMap[k].name + ':' + fnMap[k].line;</span>
-<span class="cstat-no" title="statement not covered">                o.functions[name] = functions[k];</span>
-<span class="cstat-no" title="statement not covered">                o.coveredFunctions += 1;</span>
-<span class="cstat-no" title="statement not covered">                if (functions[k] &gt; 0) {</span>
-<span class="cstat-no" title="statement not covered">                    o.calledFunctions += 1;</span>
+<span class="cstat-no" title="statement not covered" >            Object.keys(functions).forEach(<span class="fstat-no" title="function not covered" >function (k) {</span></span>
+<span class="cstat-no" title="statement not covered" >                var name = fnMap[k].name + ':' + fnMap[k].line;</span>
+<span class="cstat-no" title="statement not covered" >                o.functions[name] = functions[k];</span>
+<span class="cstat-no" title="statement not covered" >                o.coveredFunctions += 1;</span>
+<span class="cstat-no" title="statement not covered" >                if (functions[k] &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >                    o.calledFunctions += 1;</span>
                 }
             });
         });
-<span class="cstat-no" title="statement not covered">        return ret;</span>
+<span class="cstat-no" title="statement not covered" >        return ret;</span>
     }
 &nbsp;
     /**
@@ -1433,40 +1435,40 @@
      * @param {Object} cov File coverage object
      * @return {Object} New file coverage object
      */
-<span class="fstat-no" title="function not covered">    function incrementIgnoredTotals(cov) {</span>
+<span class="fstat-no" title="function not covered" >    function incrementIgnoredTotals(cov) {</span>
         //TODO: This may be slow in the browser and may break in older browsers
         //      Look into using a library that works in Node and the browser
-<span class="cstat-no" title="statement not covered">        var fileCoverage = JSON.parse(JSON.stringify(cov));</span>
+<span class="cstat-no" title="statement not covered" >        var fileCoverage = JSON.parse(JSON.stringify(cov));</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">        [</span>
+<span class="cstat-no" title="statement not covered" >        [</span>
             {mapKey: 'statementMap', hitsKey: 's'},
             {mapKey: 'branchMap', hitsKey: 'b'},
             {mapKey: 'fnMap', hitsKey: 'f'}
-        ].forEach(<span class="fstat-no" title="function not covered">function (keys) {</span>
-<span class="cstat-no" title="statement not covered">            Object.keys(fileCoverage[keys.mapKey])</span>
-                .forEach(<span class="fstat-no" title="function not covered">function (key) {</span>
-<span class="cstat-no" title="statement not covered">                    var map = fileCoverage[keys.mapKey][key];</span>
-<span class="cstat-no" title="statement not covered">                    var hits = fileCoverage[keys.hitsKey];</span>
+        ].forEach(<span class="fstat-no" title="function not covered" >function (keys) {</span>
+<span class="cstat-no" title="statement not covered" >            Object.keys(fileCoverage[keys.mapKey])</span>
+                .forEach(<span class="fstat-no" title="function not covered" >function (key) {</span>
+<span class="cstat-no" title="statement not covered" >                    var map = fileCoverage[keys.mapKey][key];</span>
+<span class="cstat-no" title="statement not covered" >                    var hits = fileCoverage[keys.hitsKey];</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">                    if (keys.mapKey === 'branchMap') {</span>
-<span class="cstat-no" title="statement not covered">                        var locations = map.locations;</span>
+<span class="cstat-no" title="statement not covered" >                    if (keys.mapKey === 'branchMap') {</span>
+<span class="cstat-no" title="statement not covered" >                        var locations = map.locations;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">                        locations.forEach(<span class="fstat-no" title="function not covered">function (location, index) {</span></span>
-<span class="cstat-no" title="statement not covered">                            if (hits[key][index] === 0 &amp;&amp; location.skip) {</span>
-<span class="cstat-no" title="statement not covered">                                hits[key][index] = 1;</span>
+<span class="cstat-no" title="statement not covered" >                        locations.forEach(<span class="fstat-no" title="function not covered" >function (location, index) {</span></span>
+<span class="cstat-no" title="statement not covered" >                            if (hits[key][index] === 0 &amp;&amp; location.skip) {</span>
+<span class="cstat-no" title="statement not covered" >                                hits[key][index] = 1;</span>
                             }
                         });
 &nbsp;
-<span class="cstat-no" title="statement not covered">                        return;</span>
+<span class="cstat-no" title="statement not covered" >                        return;</span>
                     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">                    if (hits[key] === 0 &amp;&amp; map.skip) {</span>
-<span class="cstat-no" title="statement not covered">                        hits[key] = 1;</span>
+<span class="cstat-no" title="statement not covered" >                    if (hits[key] === 0 &amp;&amp; map.skip) {</span>
+<span class="cstat-no" title="statement not covered" >                        hits[key] = 1;</span>
                     }
                 });
             });
 &nbsp;
-<span class="cstat-no" title="statement not covered">        return fileCoverage;</span>
+<span class="cstat-no" title="statement not covered" >        return fileCoverage;</span>
     }
 &nbsp;
     var exportables = {
@@ -1483,19 +1485,18 @@
     };
 &nbsp;
     /* istanbul ignore else: windows */
-    <span class="skip-if-branch" title="else path not taken">E</span>if (isNode) {
+    <span class="skip-if-branch" title="else path not taken" >E</span>if (isNode) {
         module.exports = exportables;
     } else {
-<span class="cstat-skip" title="statement not covered">        window.coverageUtils = exportables;</span>
+<span class="cstat-skip" title="statement not covered" >        window.coverageUtils = exportables;</span>
     }
 }(typeof module !== 'undefined' &amp;&amp; typeof module.exports !== 'undefined' &amp;&amp; typeof exports !== 'undefined'));
 &nbsp;
 &nbsp;</pre></td></tr>
-</tbody></table></pre>
+</table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 05:52:34 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Sat Apr 15 2017 22:07:41 GMT+0000 (UTC)</div>
 </div>
-
-
-</body></html>
+</body>
+</html>
